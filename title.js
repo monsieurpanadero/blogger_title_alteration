@@ -9,6 +9,7 @@ $(document).ready(function () {
 	
 	popular = $('.popular-posts li a');
 	for (p = 0; p < popular.length; p++) {
+		console.log('Looking for popular posts');
 		thisTitle = popular.eq(p);
 		title = $(thisTitle).html().replace('- ', '<br/><em>');
 		newTitle = title + '</em>';
