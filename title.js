@@ -1,4 +1,4 @@
-$(document).on('load', function () {
+$(document).ready(function () {
 	console.log('Hey!');
 	title = $('.post-title.entry-title a').html().replace('- ', '<br/><em>');
 	newTitle = title + '</em>';
