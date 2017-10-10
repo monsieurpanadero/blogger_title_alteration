@@ -15,4 +15,5 @@ $(document).ready(function () {
 		newTitle = title + '</em>';
 		$(thisTitle).html(newTitle);
 	}
+
 });
