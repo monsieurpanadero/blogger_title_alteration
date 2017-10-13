@@ -32,11 +32,8 @@ $(document).ready(function () {
 	$(dateHeader).addClass('date_container');
 	thisDate = $('.date_container').eq(d);
 	dateShort = thisDate.html().replace(' ', '');
-	console.log(dateShort);
 	dateShorter = dateShort.replace(' ', '');
-	console.log(dateShorter);
 	dateLength = dateShorter.length;
-	console.log(dateLength);
 	year = dateShorter.slice((dateLength - 5), dateLength);
 	console.log(year);
   	month = dateShorter.slice((dateLength - 8), (dateLength - 5));
