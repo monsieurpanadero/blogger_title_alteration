@@ -34,11 +34,10 @@ $(document).ready(function () {
 	for (d = 0; d < dateHeader.length; d++) {
 	  thisDate = $(dateContainers).eq(d);
     	  dateShort = thisDate.html().replace(/ /g, '');
-    	  year = dateShort.slice(-4);
-    	  month = dateShort.slice(-7, -4);
-    	  date = dateShort.slice(0, -7);
+    	  year = dateShort.slice(-5);
+    	  month = dateShort.slice(-8, -5);
+    	  date = dateShort.slice(0, -8);
     	  newDate = ('0' + date).slice(-2);
-		console.log(newDate);
     	  $(thisDate).html('');
     	  $(thisDate).append('<span class="date"></span>');
     	  $(thisDate).append('<span class="month"></span>');
