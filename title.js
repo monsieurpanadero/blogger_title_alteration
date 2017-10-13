@@ -41,11 +41,7 @@ $(document).ready(function () {
   	month = dateShorter.slice((dateLength - 7), (dateLength - 4));
 	console.log(month);
  	date = dateShorter.slice(0, (dateLength - 7));
-  	if (parseInt(date) < 10) {
-  	  newDate = '0' + date;
-  	} else {
-  	  newDate = date;
-  	}
+  	newDate = ('0' + date).slice(-2);
 	console.log(newDate);
   	$(dateHeader).html('');
   	$(dateHeader).append('<span class="date"></span>');
