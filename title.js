@@ -27,5 +27,8 @@ $(document).ready(function () {
 		newTitle = title + '</em>';
 		$(thisTitle).html(newTitle);
 	}
-
+	
+	dateHeader = $('.date-header span");
+	newDate = $(dateHeader).html().replace(' ', '<br/>');
+	$(dateHeader).html(newDate);
 });
