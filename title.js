@@ -31,6 +31,8 @@ $(document).ready(function () {
 	$(dateHeader).addClass('date_container');
 	dateContainers = $('.date_container');
 	
+	console.log(dateHeader);
+	
 	for (d = 0; d < dateHeader.length; d++) {
 	  thisDate = $(dateContainers).eq(d);
     	  dateShort = thisDate.html().replace(/ /g, '');
