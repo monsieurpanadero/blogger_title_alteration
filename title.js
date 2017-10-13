@@ -28,9 +28,10 @@ $(document).ready(function () {
 	}
 	
 	dateHeader = $('.date-header span');
+	for (d = 0; d < dateHeader.length; d++) {
 	$(dateHeader).addClass('date_container');
-	dateHeader = $('.date_container');
-	dateShort = dateHeader.html().replace(' ', '');
+	thisDate = $('.date_container').eq(d);
+	dateShort = thisDate.html().replace(' ', '');
 	console.log(dateShort);
 	dateShorter = dateShort.replace(' ', '');
 	console.log(dateShorter);
@@ -43,11 +44,12 @@ $(document).ready(function () {
  	date = dateShorter.slice(0, (dateLength - 8));
   	newDate = ('0' + date).slice(-2);
 	console.log(newDate);
-  	$(dateHeader).html('');
-  	$(dateHeader).append('<span class="date"></span>');
- 	$(dateHeader).append('<span class="month"></span>');
-  	$(dateHeader).append('<span class="year"></span>');
+  	$(thisDate).html('');
+  	$(thisDate).append('<span class="date"></span>');
+ 	$(thisDate).append('<span class="month"></span>');
+  	$(thisDate).append('<span class="year"></span>');
   	$('.date').append(newDate);
  	$('.month').append(month);
   	$('.year').append(year);
+	}
 });
