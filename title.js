@@ -36,11 +36,11 @@ $(document).ready(function () {
 	console.log(dateShorter);
 	dateLength = dateShorter.length;
 	console.log(dateLength);
-	year = dateShorter.slice((dateLength - 4), dateLength);
+	year = dateShorter.slice((dateLength - 5), dateLength);
 	console.log(year);
-  	month = dateShorter.slice((dateLength - 7), (dateLength - 4));
+  	month = dateShorter.slice((dateLength - 8), (dateLength - 5));
 	console.log(month);
- 	date = dateShorter.slice(0, (dateLength - 7));
+ 	date = dateShorter.slice(0, (dateLength - 8));
   	newDate = ('0' + date).slice(-2);
 	console.log(newDate);
   	$(dateHeader).html('');
