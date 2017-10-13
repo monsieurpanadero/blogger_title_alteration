@@ -33,7 +33,7 @@ $(document).ready(function () {
 	
 	for (d = 0; d < dateHeader.length; d++) {
 	  thisDate = $(dateContainers).eq(d);
-    	  dateShort = thisDate.html().replace(' '/g, '');
+    	  dateShort = thisDate.html().replace(/ /g, '');
     	  year = dateShort.slice(-4);
     	  month = dateShort.slice(-7, -4);
     	  date = dateShort.slice(0, -7);
