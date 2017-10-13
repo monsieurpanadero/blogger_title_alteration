@@ -1,5 +1,6 @@
 $(document).ready(function () {
-	titleHasLink = $('.post-title.entry-title').children('a').length;
+	titleLink = $('.post-title.entry-title').children('a')
+	titleHasLink = titleLink.length;
 	console.log('Title Has Link? - ' + titleHasLink);
 	if (titleHasLink > 0) {
 		titles = $('.post-title.entry-title a');
