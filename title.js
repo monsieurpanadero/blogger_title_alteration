@@ -36,9 +36,9 @@ $(document).ready(function () {
     	  dateShort = thisDate.html().replace(' ', '');
     	  dateShorter = dateShort.replace(' ', '');
     	  dateLength = dateShorter.length;
-    	  year = dateShorter.slice(-4);
-    	  month = dateShorter.slice(-7, -4);
-    	  date = dateShorter.slice(0, -7);
+    	  year = dateShorter.slice(-5);
+    	  month = dateShorter.slice(-8, -5);
+    	  date = dateShorter.slice(0, -8);
     	  newDate = ('0' + date).slice(-2);
     	  $(thisDate).html('');
     	  $(thisDate).append('<span class="date"></span>');
