@@ -31,11 +31,10 @@ $(document).ready(function () {
 	$(dateHeader).addClass('date_container');
 	dateContainers = $('.date_container');
 	
-	console.log(dateHeader);
-	
 	for (d = 0; d < dateHeader.length; d++) {
 	  thisDate = $(dateContainers).eq(d);
     	  dateShort = thisDate.html().replace(/ /g, '');
+	  console.log(dateShort);
     	  year = dateShort.slice(-4);
     	  month = dateShort.slice(-7, -4);
     	  date = dateShort.slice(0, -7);
