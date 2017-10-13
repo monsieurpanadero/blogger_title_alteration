@@ -33,12 +33,10 @@ $(document).ready(function () {
 	
 	for (d = 0; d < dateHeader.length; d++) {
 	  thisDate = $(dateContainers).eq(d);
-    	  dateShort = thisDate.html().replace(' ', '');
-    	  dateShorter = dateShort.replace(' ', '');
-    	  dateLength = dateShorter.length;
-    	  year = dateShorter.slice(-5);
-    	  month = dateShorter.slice(-8, -5);
-    	  date = dateShorter.slice(0, -8);
+    	  dateShort = thisDate.html().replace(' '/g, '');
+    	  year = dateShort.slice(-4);
+    	  month = dateShort.slice(-7, -4);
+    	  date = dateShort.slice(0, -7);
     	  newDate = ('0' + date).slice(-2);
     	  $(thisDate).html('');
     	  $(thisDate).append('<span class="date"></span>');
