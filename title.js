@@ -1,5 +1,6 @@
 $(document).ready(function () {
 	titleHasLink = $('.post-title.entry-title').children('a');
+	console.log('Title Has Link? - ' + titleHasLink);
 	if (titleHasLink > 0) {
 		titles = $('.post-title.entry-title a');
 		for (t = 0; t < titles.length; t++) {
@@ -20,7 +21,6 @@ $(document).ready(function () {
 	
 	popular = $('.popular-posts li a');
 	for (p = 0; p < popular.length; p++) {
-		console.log('Looking for popular posts');
 		thisTitle = popular.eq(p);
 		title = $(thisTitle).html().replace('- ', '<br/><em>');
 		newTitle = title + '</em>';
