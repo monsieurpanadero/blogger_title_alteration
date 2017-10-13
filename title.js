@@ -31,16 +31,22 @@ $(document).ready(function () {
 	$(dateHeader).addClass('date_container');
 	dateHeader = $('.date_container');
 	dateShort = dateHeader.html().replace(' ', '');
+	console.log(dateShort);
 	dateShorter = dateShort.replace(' ', '');
+	console.log(dateShorter);
 	dateLength = dateShorter.length;
+	console.log(dateLength);
 	year = dateShorter.slice((dateLength - 4), dateLength);
+	console.log(year);
   	month = dateShorter.slice((dateLength - 7), (dateLength - 4));
+	console.log(month);
  	date = dateShorter.slice(0, (dateLength - 7));
   	if (parseInt(date) < 10) {
   	  newDate = '0' + date;
   	} else {
   	  newDate = date;
   	}
+	console.log(newDate);
   	$(dateHeader).html('');
   	$(dateHeader).append('<span class="date"></span>');
  	$(dateHeader).append('<span class="month"></span>');
