@@ -28,6 +28,22 @@ $(document).ready(function () {
 	}
 	
 	dateHeader = $('.date-header span');
-	newDate = $(dateHeader).html().replace(' ', '<br/>');
-	$(dateHeader).html(newDate);
+	dateShort = dateHeader.html().replace(' ', '');
+	dateShorter = dateShort.replace(' ', '');
+	dateLength = dateShorter.length;
+	year = dateShorter.slice((dateLength - 4), dateLength);
+  	month = dateShorter.slice((dateLength - 7), (dateLength - 4));
+ 	date = dateShorter.slice(0, (dateLength - 7));
+  	if (date < 10) {
+  	  newDate = '0' + date;
+  	} else {
+  	  newDate = date;
+  	}
+  	$(dateHeader).html('');
+  	$(dateHeader).append('<span class="date"></span>');
+ 	$(dateHeader).append('<span class="month"></span>');
+  	$(dateHeader).append('<span class="year"></span>');
+  	$('.date').append(newDate);
+ 	$('.month').append(month);
+  	$('.year').append(year);
 });
