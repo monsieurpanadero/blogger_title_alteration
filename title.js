@@ -38,6 +38,7 @@ $(document).ready(function () {
     	  month = dateShort.slice(-7, -4);
     	  date = dateShort.slice(0, -7);
     	  newDate = ('0' + date).slice(-2);
+		console.log(newDate);
     	  $(thisDate).html('');
     	  $(thisDate).append('<span class="date"></span>');
     	  $(thisDate).append('<span class="month"></span>');
