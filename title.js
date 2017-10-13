@@ -28,6 +28,8 @@ $(document).ready(function () {
 	}
 	
 	dateHeader = $('.date-header span');
+	$(dateHeader).addClass('date_container');
+	dateHeader = $('.date_container');
 	dateShort = dateHeader.html().replace(' ', '');
 	dateShorter = dateShort.replace(' ', '');
 	dateLength = dateShorter.length;
