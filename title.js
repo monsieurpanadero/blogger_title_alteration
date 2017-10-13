@@ -36,7 +36,7 @@ $(document).ready(function () {
 	year = dateShorter.slice((dateLength - 4), dateLength);
   	month = dateShorter.slice((dateLength - 7), (dateLength - 4));
  	date = dateShorter.slice(0, (dateLength - 7));
-  	if (date < 10) {
+  	if (parseInt(date) < 10) {
   	  newDate = '0' + date;
   	} else {
   	  newDate = date;
